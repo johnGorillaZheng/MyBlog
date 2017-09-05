@@ -1,10 +1,18 @@
+.is-muted {
+	color: $grey-light !important;
+}
+
+a.is-muted:hover {
+	color: $grey !important;
+}
+
+
+
 .dropdown {
 	position: relative;
-	// &:hover: {
-	// 	display: block;
-	// }
 
 	.dropdown-menu {
+		box-shadow: 0 0 8px #777;
 		display: none;
 		position: absolute;
 		left: 0;
@@ -45,7 +53,7 @@
 
 button.nav-item {
 	color: $text-light;
-	background-color: white;
+	background-color: transparent;
 	border: none;
 
 	&:hover {
@@ -79,6 +87,7 @@ button.nav-item {
 
 .nav {
 	height: 4.5rem;
+	border-bottom: inset;
 }
 
 .nav-item img {

@@ -15407,11 +15407,21 @@ label.panel-block:hover {
   background: rgba(255, 56, 96, 0.05);
 }
 
+.is-muted {
+  color: #b5b5b5 !important;
+}
+
+a.is-muted:hover {
+  color: #7a7a7a !important;
+}
+
 .dropdown {
   position: relative;
 }
 
 .dropdown .dropdown-menu {
+  -webkit-box-shadow: 0 0 8px #777;
+          box-shadow: 0 0 8px #777;
   display: none;
   position: absolute;
   left: 0;
@@ -15451,7 +15461,7 @@ label.panel-block:hover {
 
 button.nav-item {
   color: #7a7a7a;
-  background-color: white;
+  background-color: transparent;
   border: none;
 }
 
@@ -15485,6 +15495,7 @@ button.nav-item.is-active {
 
 .nav {
   height: 4.5rem;
+  border-bottom: inset;
 }
 
 .nav-item img {
