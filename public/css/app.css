@@ -15982,3 +15982,16 @@ button.nav-item.is-active {
   padding-right: 100px;
 }
 
+.side-menu {
+  position: fixed;
+  height: 100vh;
+  width: 200px;
+  background-color: whitesmoke;
+  overflow-y: scroll;
+}
+
+.side-menu a:hover {
+  color: green;
+  background-color: white;
+}
+
