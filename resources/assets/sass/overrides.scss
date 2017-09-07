@@ -2,64 +2,77 @@
 	color: $grey-light !important;
 }
 
-a.is-muted:hover {
+a.is-muted:hover{
 	color: $grey !important;
 }
 
-
-
 .dropdown {
 	position: relative;
+}
 
-	.dropdown-menu {
-		box-shadow: 0 0 8px #777;
-		display: none;
-		position: absolute;
-		left: 0;
-		top: 102%;
-		z-index: 1000;
-		background-color: white;
-		min-width: 200px;
-		text-align: left;
-		box-shadow: 0 0 1px rgba(57,70,78,.15), 0 20px 55px -8px rgba(57,70,78,.25);
-	
-		li {
-			&.seperator {
-				border-top: 1px solid #ccc;
-				margin: 5px 0;
-			}
-			&>a {
-				margin: 5px 0;
-				padding: 5px 0 5px 10px;
-				display: block;
+.dropdown .is-open {
+	display: block;
+}
 
-				&:hover {
-					background-color: whitesmoke;
-					display: block;
-				}
-			}
+.dropdown-menu {
+	box-shadow: 0 0 8px #777;
+	background-color: white;
+	display: none;
+	left: 0;
+	position: absolute;
+	top: 102%;
+	z-index: 10;
+	margin: 10px 10px 100000px 0;
+	min-width: 20px;
+	box-shadow: 0 0 1px rgba(57,70,78,.15), 0 20px 55px -8px rgba(57,70,78,.25);
+	text-align: left;
+	li {
+		&.seperator {
+	  		margin: 5px 0;
+	  		width: 100%;
+	  		border-top: 1px solid #ccc;
 		}
-	}
-	
-	&.is-aligned-right .dropdown-menu {
-		right: 0;
-		left: auto;
-	}
 
-	&.is-open .dropdown-menu {
-		display: block;
+		&>a {
+	  		display: block;
+	  		padding: 5px 0 5px 15px;
+	  		margin: 5px 0;
+	  		&:hover {
+	    		background-color: whitesmoke;
+	  		}
+		}
 	}
 }
 
+.dropdown.is-open .dropdown-menu{
+	display: block;
+}
+
+.dropdown.is-aligned-right .dropdown-menu {
+	left: auto;
+	right: 0;
+}
+
+
+	/* ========================================
+	=========== Nav Item Override ==========
+	======================================== */
+
+	// I want the .nav-item design that comes from bulma,
+	// but with <button> instead of <a>. This is the bulma
+	// code but targeting <button> instead, plus a few
+	// modifications to normalize the <button> css
+
 button.nav-item {
-	color: $text-light;
 	background-color: transparent;
 	border: none;
+	color: $text-light;
 
 	&:hover {
 		color: $link-hover;
 	}
 
+	// Modifiers
 	&.is-active {
 		color: $link-active;
 	}
@@ -85,11 +98,11 @@ button.nav-item {
 	}
 }
 
-.nav {
-	height: 4.5rem;
-	border-bottom: inset;
-}
 
 .nav-item img {
-	max-height: 2.5rem;
+	max-height: 2.8rem;
+}
+
+.nav {
+	height: 4.5rem;
 }
