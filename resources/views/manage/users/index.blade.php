@@ -30,7 +30,7 @@
 						<td>{{ $user->name }}</td>
 						<td>{{ $user->email }}</td>
 						<td>{{ $user->created_at }}</td>
-						<td><a class="button is-outlined" href="{{ route('users.edit',$user->id) }}">Edit</a></td>
+						<td><a class="button is-outlined" href="{{ route('users.show',$user->id) }}">Edit</a></td>
 					</tr>
 				@endforeach
 			</tbody>

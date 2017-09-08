@@ -22,6 +22,9 @@ Vue.use(Buefy);
 //Vue.component('example', require('./components/Example.vue'));
 
 var app = new Vue({
-	el: '#app',
-	data: {}
+	el:'#app',
+	data:{
+		auto_password:true,
+		password_options:'keep'
+	}
 });
