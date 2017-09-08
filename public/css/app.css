@@ -15508,6 +15508,7 @@ button.nav-item.is-active {
 
 .nav {
   height: 4.5rem;
+  border-bottom: inset;
 }
 
 .m-t-5 {
@@ -16001,5 +16002,17 @@ button.nav-item.is-active {
 .side-menu a:hover {
   color: green;
   background-color: white;
+}
+
+.management-area {
+  position: absolute;
+  top: 4rem;
+  left: 200px;
+  right: 0;
+}
+
+.flex-container {
+  margin: 10px 25px auto 300px;
+  max-width: 900px;
 }
 

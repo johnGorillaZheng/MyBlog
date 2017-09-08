@@ -1,4 +1,4 @@
-       <nav class="nav has-shaddow">
+       <nav class="nav has-shaddow navbar">
             <div class="container">
                 <div class="navbar-brand">
                     <a class="nav-item" href="{{ route('home') }}">
