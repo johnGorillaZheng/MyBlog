@@ -44,7 +44,7 @@ class UserController extends Controller
             'email' => 'required|email|unique:users'
         ]);
 
-        if (Request::has('password') && !empty($request->password)) {
+        if (!empty($request->password)) {
             $password = trim($request->password);
         } else {
             $length = 10;
@@ -63,12 +63,7 @@ class UserController extends Controller
         $user->password = Hash::make($password);
         $user->save();
 
-        if ($user->save()) {
-            return redirect()->route('users.show',$user->id);
-        } else {
-            Session::flash('danger', 'Sorry, a problem occured while creating this user');
-            return redirect()->route('users.create');
-        }
+        return redirect()->route('users.show',$user->id);
     }
 
     /**

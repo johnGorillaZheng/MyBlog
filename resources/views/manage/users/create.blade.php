@@ -10,6 +10,7 @@
 		<div class="columns">
 			<div class="column">
 				<form action="{{ route('users.store') }}" method="POST">
+				{{ csrf_field() }}
 					<div class="field">
 						<label for="name" class="label">Name</label>
 						<p class="control">
