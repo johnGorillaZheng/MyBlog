@@ -6,7 +6,7 @@
 				<h1 class="title">All Roles</h1>
 			</div>
 			<div class="level-right">
-				<a href="{{ route('roles.create') }}" class="button is-primary"><i class="fa fa-user-add m-r-10"></i> Create New User</a>
+				<a href="{{ route('roles.create') }}" class="button is-primary"><i class="fa fa-user-add m-r-10"></i> Create New Role</a>
 			</div>
 		</div>
 		<hr class="m-t-5">
@@ -17,8 +17,7 @@
 						<article class="media">
 							<div class="media-content">
 								<div class="content">
-									<h3 class="title">{{ $role->display_name }}</h3>
-									<h4 class="subtitle"><em>{{ $role->name }}</em></h4>
+									<h3 class="title">{{ $role->name }}</h3>
 									<p>
 										{{ $role->description }}
 									</p>
@@ -37,4 +36,5 @@
 				</div>
 			@endforeach
 		</div>
+	</div>
 @endsection
