@@ -25,6 +25,7 @@ var app = new Vue({
 	el:'#app',
 	data:{
 		auto_password:true,
-		password_options:'keep'
+		password_options:'keep',
+		permissionsSelected:[]
 	}
 });

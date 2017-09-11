@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Role;
+use App\Permission;
 
 class RoleController extends Controller
 {
@@ -47,7 +48,7 @@ class RoleController extends Controller
      */
     public function show($id)
     {
-        $role = Role::findOrFail($id);
+        $role = Role::findOrFail($id)->with('permissions');
         return view('manage.roles.show')->withRole($role);
     }
 
@@ -59,8 +60,9 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
+        $permissions = Permission::all();
         $role = Role::findOrFail($id);
-        return view('manage.roles.edit')->withRole($role);
+        return view('manage.roles.edit')->withRole($role)->withPermissions($permissions);
     }
 
     /**

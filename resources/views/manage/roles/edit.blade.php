@@ -10,7 +10,6 @@
 				<a href="{{ route('roles.edit', $role->id) }}" class="button is-primary"><i class="fa fa-user-add m-r-10"></i> Edit this role</a>
 			</div>
 		</div>
-		<hr class="m-t-5">
 		<form action="{{ route('roles.update', $role->id) }}" method="POST">
 			{{ csrf_field() }}
 			{{ method_field('PUT') }}
@@ -56,7 +55,16 @@
 							<div class="media-content">
 								<div class="content">
 									<h1 class="title">Permissions:</h1>
-
+									<div class="content">
+										@foreach($permissions as $permission)
+										
+											<div class="field">
+												<b-checkbox native-value="{{ $permission->name }}" v-model="permissionsSelected">
+													{{ $permission->name }} (<em>{{ $permission->description }}</em>)
+												</b-checkbox>
+											</div>	
+										@endforeach										
+									</div>
 								</div>
 							</div>
 						</div>
@@ -66,3 +74,7 @@
 		</form>
 	</div>
 @endsection
+
+
+
+
