@@ -23,6 +23,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
 	Route::resource('/users','UserController');
 	Route::resource('/permissions','PermissionController');
 	Route::resource('/roles','RoleController');
+	Route::resource('/articles','ArticleController');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
