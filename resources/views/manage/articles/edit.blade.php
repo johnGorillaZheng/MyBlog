@@ -1,6 +1,6 @@
 @extends('layouts.manage')
 @section('content')
-@include('UEditor::head')
+    @include('UEditor::head')
     <div class="flex-container">
         <div class="columns m-t-10">
             <div class="column">
@@ -10,12 +10,13 @@
         <hr class="m-t-5">
         <div class="columns">
             <div class="column">
-                <form action="{{ route('articles.store') }}" method="POST">
+                <form action="{{ route('articles.update', $article->id) }}" method="POST">
                     {{ csrf_field() }}
+                    {{ method_field('PUT') }}
                     <div class="field">
                         <label for="title" class="label">标题:</label>
                         <p class="control">
-                            <input type="text" class="input" name="title" id="name">
+                            <input type="text" class="input" name="title" id="name" value="{{$article->title}}">
                         </p>
                     </div>
 
@@ -23,7 +24,7 @@
                     <div class="field">
                         <label for="body">描述:</label>
                         <script id="container" name="body" style="height: 250px" type="text/plain">
-                            写点啥吧
+                            {!! $article->body !!}
                         </script>
                         <!-- 实例化编辑器 -->
                         <script type="text/javascript">
@@ -33,7 +34,7 @@
                         });
                         </script>
                     </div>
-                    <button class="button is-success">Create User</button>
+                    <button class="button is-success">更新文章</button>
                 </form>
             </div>
         </div>

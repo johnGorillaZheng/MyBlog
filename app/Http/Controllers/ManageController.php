@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use Illuminate\Http\Request;
 
 class ManageController extends Controller
@@ -13,6 +14,7 @@ class ManageController extends Controller
 
     public function dashboard()
     {
-    	return view('manage.dashboard');
+        $articles = Article::all();
+    	return view('manage.dashboard')->withArticles($articles);
     }
 }

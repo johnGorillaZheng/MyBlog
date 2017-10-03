@@ -64,7 +64,8 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $article = Article::findOrFail($id);
+        return view('manage.articles.edit')->withArticle($article);
     }
 
     /**
@@ -76,7 +77,12 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $article = Article::findOrFail($id);
+        $article->title = $request->get('title');
+        $article->body = $request->get('body');
+        $article->save();
+
+        return redirect()->route('manage.dashboard');
     }
 
     /**

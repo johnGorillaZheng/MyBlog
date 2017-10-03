@@ -17,4 +17,8 @@ class Article extends Model
     public function Comment() {
         return $this->hasMany(Comment::class);
     }
+
+    public function Topic() {
+        return $this->hasOne(Topic::class);
+    }
 }
