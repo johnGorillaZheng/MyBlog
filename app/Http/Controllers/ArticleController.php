@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -34,7 +36,13 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $article = new Article;
+        $article->title = $request->get('title');
+        $article->body =  $request->get('body');
+        $article->user_id = Auth::id();
+        $article->topic_id = 0;
+        $article->save();
+        return view('manage.dashboard');
     }
 
     /**

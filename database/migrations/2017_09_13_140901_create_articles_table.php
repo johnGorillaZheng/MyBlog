@@ -18,7 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string('title')->nullable();
             $table->text('body');
             $table->integer('user_id')->unsigned();
-            $table->integer('comments_count')->unsigned();
+            $table->integer('comments_count')->unsigned()->default(0);
             $table->integer('topic_id')->unsigned();
             $table->timestamps();
         });
