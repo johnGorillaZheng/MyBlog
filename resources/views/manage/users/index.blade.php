@@ -1,5 +1,4 @@
 @extends('layouts.manage')
-
 @section('content')
 <div class="flex-container">
 	<div class="columns m-t-10">
@@ -22,7 +21,6 @@
 					<th>行为</th>
 				</tr>
 			</thead>
-
 			<tbody>
 				@foreach ($users as $user)
 					<tr>
@@ -37,7 +35,5 @@
 		</table>	
 	</div>
 	{{ $users->links() }}
-
 </div>
-
 @endsection

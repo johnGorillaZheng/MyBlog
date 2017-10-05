@@ -24,6 +24,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
 	Route::resource('/permissions','PermissionController');
 	Route::resource('/roles','RoleController');
 	Route::resource('/articles','ArticleController');
+	Route::resource('/topics','TopicController');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -5,7 +5,7 @@
 		</p>
 		<ul class="menu-list">
 			<li><a href="{{ route('manage.dashboard') }}">博文</a></li>
-			<li><a href="{{ route('manage.dashboard') }}">主题</a></li>
+			<li><a href="{{ route('topics.index') }}">主题</a></li>
 		</ul>
 		<p class="menu-label">
 			用户相关

@@ -19,8 +19,18 @@
                             <input type="text" class="input" name="title" id="name" value="{{$article->title}}">
                         </p>
                     </div>
-
-
+                    <div class="field">
+                        <label for="topic" class="label">话题：</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="topic">
+                                    @foreach($topics as $topic)
+                                        <option value="{{$topic->id}}">{{$topic->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                     <div class="field">
                         <label for="body">描述:</label>
                         <script id="container" name="body" style="height: 250px" type="text/plain">

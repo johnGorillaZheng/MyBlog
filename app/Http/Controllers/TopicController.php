@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
 use App\Topic;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class ArticleController extends Controller
+class TopicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +14,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $topic = Topic::all();
+        return view('manage.topics.index')->withTopics($topic);
     }
 
     /**
@@ -26,8 +25,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        $topic = Topic::all();
-        return view('manage.articles.create')->withTopics($topic);
+
     }
 
     /**
@@ -38,13 +36,11 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $article = new Article;
-        $article->title = $request->get('title');
-        $article->body =  $request->get('body');
-        $article->user_id = Auth::id();
-        $article->topic_id = $request->get('topic');
-        $article->save();
-        return redirect()->route('manage.dashboard');
+        $topic = new Topic;
+        $topic->name = $request->get('name');
+        $topic->save();
+
+        return back();
     }
 
     /**
@@ -66,9 +62,7 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        $article = Article::findOrFail($id);
-        $topics = Topic::all();
-        return view('manage.articles.edit')->withArticle($article)->withTopics($topics);
+        //
     }
 
     /**
@@ -80,13 +74,7 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $article = Article::findOrFail($id);
-        $article->title = $request->get('title');
-        $article->body = $request->get('body');
-        $article->topic_id = $request->get('topic');
-        $article->save();
-
-        return redirect()->route('manage.dashboard');
+        //
     }
 
     /**

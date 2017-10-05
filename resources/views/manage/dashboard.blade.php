@@ -20,7 +20,7 @@
                                 <div class="content">
                                     <h3 class="title">{{ $article->title }}</h3>
                                     <p>
-                                        {{ $article->user_id }}
+                                        {{ \App\Topic::find($article->topic_id)->name }}
                                     </p>
                                 </div>
                                 <div class="columns is-mobile">
