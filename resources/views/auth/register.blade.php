@@ -10,7 +10,7 @@
                     <form action="{{ route('register') }}" method="POST" role="form">
                         {{ csrf_field() }}
                         <div class="field">
-                            <label for="name" class="label">Name</label>
+                            <label for="name" class="label">用户名：</label>
                             <p class="control">
                                 <input class="input {{ $errors->has('name') ? 'is-danger' : '' }}" type="text" name="name" id="name" placeholder="Your name" value="{{ old('name') }}" required>
                             </p>
@@ -20,7 +20,7 @@
                         </div>
 
                         <div class="field">
-                            <label for="email" class="label">Email Address</label>
+                            <label for="email" class="label">邮箱地址</label>
                             <p class="control">
                                 <input class="input {{ $errors->has('email') ? 'is-danger' : '' }}" type="text" name="email" id="email" placeholder="name@example.com" value="{{ old('email') }}" required>
                             </p>
@@ -31,7 +31,7 @@
                         <div class="columns">
                             <div class="column">
                                 <div class="field">
-                                    <label for="password" class="label">Password</label>
+                                    <label for="password" class="label">密码</label>
                                     <p class="control">
                                         <input class="input {{ $errors->has('password') ? 'is-danger' : '' }}" type="password" name="password" id="password" required>
                                     </p>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="column">
                                 <div class="field">
-                                    <label for="password_confirmation" class="label">Password Confirmation</label>
+                                    <label for="password_confirmation" class="label">确认密码</label>
                                     <p class="control">
                                         <input class="input {{ $errors->has('password_confirmation') ? 'is-danger' : '' }}" type="password_confirmation" name="password_confirmation" id="password_confirmation" required>
                                     </p>

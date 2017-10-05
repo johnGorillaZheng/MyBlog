@@ -4,7 +4,7 @@
     <div class="flex-container">
         <div class="columns m-t-10">
             <div class="column">
-                <h1 class="title">Writing A New Blog</h1>
+                <h1 class="title">修改博文</h1>
             </div>
         </div>
         <hr class="m-t-5">

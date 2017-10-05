@@ -7,7 +7,7 @@
 				<h3>{{ $role->name }}</h3>
 			</div>
 			<div class="level-right">
-				<a href="{{ route('roles.edit', $role->id) }}" class="button is-primary"><i class="fa fa-user-add m-r-10"></i> Edit this role</a>
+				<a href="{{ route('roles.edit', $role->id) }}" class="button is-primary">编辑当前角色</a>
 			</div>
 		</div>
 		<form action="{{ route('roles.update', $role->id) }}" method="POST">
@@ -22,7 +22,7 @@
 									<h2 class="title">Role Details:</h1>
 									<div class="field">
 										<p class="control">
-											<label for="display_name" class="label">Name:</label>
+											<label for="display_name" class="label">名字:</label>
 											<input type="text" class="input" name="display_name" value="{{ $role->display_name }}" id="display_name">
 										</p>
 									</div>
@@ -36,7 +36,7 @@
 
 									<div class="field">
 										<p class="control">
-											<label for="description" class="label">Description:</label>
+											<label for="description" class="label">描述:</label>
 											<input type="text" class="input" name="description" value="{{ $role->description }}" id="description">
 										</p>
 									</div>

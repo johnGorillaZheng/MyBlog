@@ -4,10 +4,10 @@
 	<div class="flex-container">
         <div class="columns m-t-10">
             <div class="column">
-                <h1 class="title">Manage Articles</h1>
+                <h1 class="title">管理博文</h1>
             </div>
             <div class="level-right">
-                <a href="{{ route('articles.create') }}" class="button is-primary"><i class="fa fa-user-add m-r-10"></i>Write New Articles</a>
+                <a href="{{ route('articles.create') }}" class="button is-primary">写篇文章</a>
             </div>
         </div>
         <hr class="m-t-5">
@@ -25,10 +25,10 @@
                                 </div>
                                 <div class="columns is-mobile">
                                     <div class="column is-one-half">
-                                        <a href="{{ route('articles.show',$article->id) }}" class="button is-primary is-fullwidth">Details</a>
+                                        <a href="{{ route('articles.show',$article->id) }}" class="button is-primary is-fullwidth">预览</a>
                                     </div>
                                     <div class="column is-one-half">
-                                        <a href="{{ route('articles.edit',$article->id) }}" class="button is-light is-fullwidth">Edit</a>
+                                        <a href="{{ route('articles.edit',$article->id) }}" class="button is-light is-fullwidth">编辑</a>
                                     </div>
                                 </div>
                             </div>

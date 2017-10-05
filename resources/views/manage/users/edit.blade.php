@@ -3,7 +3,7 @@
 	<div class="flex-container">
 		<div class="columns m-t-10">
 			<div class="column">
-				<h1 class="title">Edit User</h1>
+				<h1 class="title">编辑用户</h1>
 			</div>
 		</div>
 		<hr class="m-t-5">
@@ -13,21 +13,21 @@
 					{{ method_field('PUT') }}
 					{{ csrf_field() }}
 					<div class="field">
-						<label for="name" class="label">Name</label>
+						<label for="name" class="label">姓名</label>
 						<p class="control">
 							<input type="text" class="input" name="name" id="name" value="{{ $user->name }}">
 						</p>
 					</div>
 
 					<div class="field">
-						<label for="email" class="label">Email</label>
+						<label for="email" class="label">邮箱</label>
 						<p class="control">
 							<input type="text" class="input" name="email" id="email" value="{{ $user->email }}">
 						</p>
 					</div>
 
 					<div class="field">
-						<label for="password" class="label">Password</label>
+						<label for="password" class="label">密码</label>
 						<div>
 							<div class="field">
 								<b-radio native-value="keep" v-model="password_options">Do not change password</b-radio>

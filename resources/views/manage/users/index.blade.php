@@ -2,12 +2,12 @@
 
 @section('content')
 <div class="flex-container">
-	<div class="columns">
+	<div class="columns m-t-10">
 		<div class="column">
-			<h1 class="title">Manage User</h1>
+			<h1 class="title">用户管理</h1>
 		</div>
 		<div class="level-right">
-			<a href="{{ route('users.create') }}" class="button is-primary"><i class="fa fa-user-add m-r-10"></i> Create New User</a>
+			<a href="{{ route('users.create') }}" class="button is-primary">创建用户</a>
 		</div>
 	</div>
 	<hr>
@@ -16,10 +16,10 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Name</th>
-					<th>Email</th>
-					<th>Date Created</th>
-					<th>Actions</th>
+					<th>用户名</th>
+					<th>邮箱</th>
+					<th>创建日期</th>
+					<th>行为</th>
 				</tr>
 			</thead>
 
@@ -30,7 +30,7 @@
 						<td>{{ $user->name }}</td>
 						<td>{{ $user->email }}</td>
 						<td>{{ $user->created_at }}</td>
-						<td><a class="button is-outlined" href="{{ route('users.show',$user->id) }}">Edit</a></td>
+						<td><a class="button is-outlined" href="{{ route('users.show',$user->id) }}">编辑</a></td>
 					</tr>
 				@endforeach
 			</tbody>

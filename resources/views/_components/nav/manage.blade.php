@@ -1,28 +1,22 @@
 <div class="side-menu">
 	<aside class="menu  m-t-30 m-l-15">
 		<p class="menu-label">
-			General
+			内容相关
 		</p>
 		<ul class="menu-list">
-			<li><a href="{{ route('manage.dashboard') }}">Dashboard</a></li>
+			<li><a href="{{ route('manage.dashboard') }}">博文</a></li>
+			<li><a href="{{ route('manage.dashboard') }}">主题</a></li>
 		</ul>
 		<p class="menu-label">
-			Administration
+			用户相关
 		</p>
 		<ul class="menu-list">
 			<li>
-				<a href="{{ route('users.index') }}">Manage Users</a>
+				<a href="{{ route('users.index') }}">粉丝们</a>
 			</li>
 			<li>
-				<a href="{{ route('permissions.index') }}">Roles &amp; Permissions</a>
-				<ul>
-					<li>
-						<a href="{{ route('roles.index') }}">Roles</a>
-					</li>
-					<li>
-						<a href="{{ route('permissions.index') }}">Permissions</a>
-					</li>
-				</ul>
+			<li>
+				<a href="{{ route('roles.index') }}">角色们</a>
 			</li>
 		</ul>
 	</aside>
